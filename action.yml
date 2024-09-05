@@ -1,4 +1,4 @@
-name: "Quarto Merge Sidebar YAMl"
+name: "Quarto Merge Sidebar YAML"
 description: "Merge all sidebar configuration from all posts into _quarto.yml"
 author: "InvictusNavarchus"
 
