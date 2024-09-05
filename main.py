@@ -15,7 +15,12 @@ def get_sidebars_data(target_path):
 def merge_yaml(merge_target_path, data_to_merge):
     with open(merge_target_path, 'r') as merge_target:
         merge_target_data = yaml.safe_load(merge_target)
-    merge_target_data['website'].setdefault('sidebar', []).append(data_to_merge)
+        
+    merge_target_data['website'].setdefault('sidebar', [])
+
+    for sidebar in data_to_merge:
+        merge_target_data['website']['sidebar'].append(sidebar)
+    
     with open(merge_target_path, 'w') as output:
         yaml.dump(merge_target_data, output)
 
