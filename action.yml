@@ -12,7 +12,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.x'  # You can set the specific Python version here
+          python-version: '3.x'
 
       # Step 2: Install dependencies from requirements.txt
       - name: Install dependencies
