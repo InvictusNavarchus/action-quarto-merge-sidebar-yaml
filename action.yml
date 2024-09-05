@@ -1,0 +1,21 @@
+name: "Quarto Merge Sidebar YAMl"
+description: "Merge all sidebar configuration from all posts into _quarto.yml"
+author: "InvictusNavarchus"
+
+runs:
+  using: "composite"
+  steps:
+    # Step 1: Set up Python environment
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'  # You can set the specific Python version here
+
+    # Step 2: Install dependencies from requirements.txt
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+
+    # Step 3: Run the Python script
+    - name: Run Python script
+      run: python main.py
