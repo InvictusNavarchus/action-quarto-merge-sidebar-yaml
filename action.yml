@@ -15,9 +15,9 @@ runs:
     - name: Install dependencies
       shell: bash
       run: |
-        pip install -r requirements.txt
+        pip install -r $GITHUB_ACTION_PATH/requirements.txt
 
     # Step 3: Run the Python script
     - name: Run Python script
       shell: bash
-      run: python main.py
+      run: python $GITHUB_ACTION_PATH/main.py
